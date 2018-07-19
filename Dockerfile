@@ -10,6 +10,7 @@ RUN apt-get update -qq && \
 		xvfb \
 		curl && \
 	curl -OJL https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5 && \
+	pip install --upgrade pip && \
 	pip install --no-cache-dir -r requirements.txt && \
 	apt-get remove --purge -qq curl && \
 	apt-get autoremove --purge -qq && \
