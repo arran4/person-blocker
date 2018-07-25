@@ -11,6 +11,7 @@ RUN apt-get update -qq && \
 		curl && \
 	curl -OJL https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5 && \
 	pip install --no-cache-dir -r requirements.txt && \
+	pip install 'keras==2.1.6' --force-reinstall && \
 	apt-get remove --purge -qq curl && \
 	apt-get autoremove --purge -qq && \
 	apt-get clean -qq && \
